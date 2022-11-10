@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>JavaScript demo graded lab</title>
+	  <link rel="stylesheet" href="styles.css"> 
+
+
+	  <!-- used to embed client side script/JS -->
+	  <script type="text/javascript">
+		<!--I struggled trying to get this funciton to load after guessing the number right-->
+			//function sayHello(){
+			//	document.write("Whatsup")
+				
+	  
+			var secret = 5;
+			var i;
+		<!--this is the line where i put the correct guess-->	
+			for(i = 1; i <=5; i++){  // this is so my loop can loop 3 times
+			
+		<!--I need to further research correct breakout methods -->	
+			var isTrue = true
+			while(isTrue){
+			var guess = parseInt(prompt("Enter a guess 1-5"));
+			if(secret == guess){
+				alert("Guessed It");
+				isTrue = false
+			}else if(secret > guess){
+				document.write("\nguess is too high!");
+			}else if(secret < guess){
+				document.write("\nsecret bigger than guess");
+			}else{
+				document.write("\ninvalid input" ) ;
+				}<!--The closing curly brackets are very important. one missing one can break a page-->
+			}	
+			}
+			
+
+	  </script>
+
+	</head>
+	<body>
+		<h1></h1>
+		<p>Click on the following button for calling the function:</p>
+		<form>
+		 <input type = "button" onclick = "msgprint()" value = "Message Print">  
+		</form>
+		<p></p>
+		<p></p>
+		<p> </p>
+	</body>
+</html>
